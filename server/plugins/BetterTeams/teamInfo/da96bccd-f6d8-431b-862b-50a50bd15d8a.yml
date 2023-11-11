@@ -1,0 +1,110 @@
+name: Destroyers
+description: ''
+open: false
+pvp: false
+home: ''
+color: '6'
+chests: []
+players:
+- 7ef6f723-cf59-3a47-bce9-ee08d7e52451,OWNER
+- 202619a8-00c0-3fff-a064-3e93d741f77d,DEFAULT
+level: 1
+tag: ''
+score: 2
+echest:
+  '0':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: CARROT_ON_A_STICK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '[{"text":"Cocoon Wand"}]'
+      lore:
+      - '[{"text":"Wraps you as","italic":false}]'
+      - '[{"text":"a leafy larva","italic":false}]'
+      ItemFlags:
+      - HIDE_UNBREAKABLE
+      Unbreakable: true
+  '1':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        MENDING: 1
+  '2':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ENCHANTING_TABLE
+  '3':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        KNOCKBACK: 2
+  '4':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: STICK
+    amount: 17
+  '7':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ANVIL
+  '10':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: EMERALD
+    amount: 23
+  '11':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: DIRT
+    amount: 4
+  '12':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: CRAFTING_TABLE
+  '14':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: LAPIS_LAZULI
+    amount: 4
+  '18':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: BOOK
+    amount: 25
+  '20':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: TORCH
+  '21':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: GRINDSTONE
+  '22':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ARROW
+  '24':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: GOLD_INGOT
+    amount: 4
+  '25':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: OBSIDIAN
+    amount: 6
+  '26':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: LEATHER
+    amount: 13

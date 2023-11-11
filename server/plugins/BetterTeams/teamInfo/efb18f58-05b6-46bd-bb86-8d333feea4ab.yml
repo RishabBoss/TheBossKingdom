@@ -1,0 +1,15 @@
+name: IMMORTAL
+description: ''
+open: false
+pvp: false
+home: BossSmp:996.7889295798344:64.0:-437.6975111974709:-96.9238:11.985411
+color: '5'
+chests: []
+players:
+- 199ac646-f24c-3822-9dfb-6246d5a4a1ee,OWNER
+- dd2c92eb-03eb-3e13-b0bb-1d1b904db422,DEFAULT
+level: 1
+tag: ''
+score: 9
+warps:
+- a;BossSmp:4108.597488430558:77.0:3359.461948366933:35.249573:26.999987

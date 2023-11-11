@@ -1,0 +1,13 @@
+name: Vengeance
+description: ''
+open: false
+pvp: false
+home: ''
+color: '4'
+chests: []
+players:
+- 5f8d5a49-d9bc-3bc9-9032-5ee81e7d1c9b,OWNER
+- be4d6a3c-d553-3aae-8d5d-99fe4d539ea4,DEFAULT
+level: 1
+tag: ''
+score: 0

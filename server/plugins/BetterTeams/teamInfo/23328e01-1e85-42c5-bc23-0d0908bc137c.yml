@@ -1,0 +1,21 @@
+name: LifeHunters
+description: ''
+open: false
+pvp: false
+home: BossSmp:1297.4905030247548:63.0:2317.112787416478:93.29202:17.23393
+color: '1'
+chests: []
+players:
+- 6da6ca96-7da7-3e56-96cd-e7c622d58d06,OWNER
+- e811118b-5d33-3f03-af92-caa33e22d163,DEFAULT
+level: 1
+tag: ''
+warps:
+- base;BossSmp_nether:155.30000001192093:52.0:-49.265383682648604:103.17168:21.21115;of
+- ec;BossSmp:1040.9127871403864:64.0:2137.194691900209:171.45503:26.139896
+echest:
+  '0':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: IRON_INGOT
+    amount: 16

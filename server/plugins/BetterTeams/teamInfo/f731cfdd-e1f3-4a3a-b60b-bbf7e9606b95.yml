@@ -1,0 +1,191 @@
+name: Revenge
+description: ''
+open: false
+pvp: false
+home: BossSmp:1439.6108506654994:69.0:-4105.616799602217:86.569305:19.85675
+color: '6'
+chests: []
+players:
+- c9429afb-8a29-3e5a-afa2-435613ac5731,OWNER
+level: 1
+tag: ''
+echest:
+  '3':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: STICK
+    amount: 2
+  '4':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      potion-type: minecraft:strong_regeneration
+  '5':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: COBBLESTONE
+    amount: 40
+  '0':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: POTATO
+    amount: 16
+  '9':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        MENDING: 1
+  '10':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: SPLASH_POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      potion-type: minecraft:weakness
+  '1':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ANVIL
+  '2':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: BLAZE_ROD
+    amount: 24
+  '7':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: LAPIS_BLOCK
+    amount: 26
+  '15':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: LECTERN
+  '16':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: DIAMOND_BOOTS
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      Damage: 362
+  '17':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: DIAMOND_CHESTPLATE
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      Damage: 362
+  '19':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: MELON_SLICE
+    amount: 37
+  '20':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: SUGAR_CANE
+    amount: 12
+  '21':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: IRON_INGOT
+    amount: 13
+  '22':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      potion-type: minecraft:water_breathing
+  '23':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: BREWING_STAND
+  '26':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: GRINDSTONE
+  '14':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: DIAMOND_BLOCK
+    amount: 18
+  '25':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: BASALT
+    amount: 13
+  '24':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: GOLDEN_CARROT
+    amount: 17
+  '6':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: NETHERITE_PICKAXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        DIG_SPEED: 4
+        LOOT_BONUS_BLOCKS: 3
+        MENDING: 1
+        DURABILITY: 3
+      repair-cost: 1
+      Damage: 177
+  '8':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: NETHERITE_INGOT
+    amount: 2
+  '11':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        MENDING: 1
+  '12':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        MENDING: 1
+  '13':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        MENDING: 1
+  '18':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        MENDING: 1
+score: 9
+warps:
+- farm;BossSmp_nether:284.1866712180882:47.0:-506.66979499767984:-97.643:40.05082
+- base1;BossSmp:-3018.152010275683:112.0:-4280.902166181345:39.23992:29.4308

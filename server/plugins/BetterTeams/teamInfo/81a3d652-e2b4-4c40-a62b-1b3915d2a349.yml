@@ -1,0 +1,154 @@
+name: BossGang
+description: ''
+open: false
+pvp: false
+home: BrosSmp_nether:-395.9562764534534:57.41931938117376:927.6999999880791:125.65355:19.056273
+color: '6'
+chests: []
+players:
+- 83780b91-89cc-3e2c-aa50-4d5532bd51a1,OWNER
+- 6f6763a5-2fbc-361f-9327-5f1ce258007e,ADMIN
+level: 1
+tag: ''
+score: 8
+echest:
+  '0':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: BOOK
+    amount: 60
+  '2':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: GOLD_INGOT
+    amount: 29
+  '3':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: EMERALD
+    amount: 11
+  '5':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ENCHANTING_TABLE
+    amount: 2
+  '6':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ANVIL
+    amount: 3
+  '7':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: BLAST_FURNACE
+  '9':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ENCHANTED_GOLDEN_APPLE
+  '10':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: TOTEM_OF_UNDYING
+  '22':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: SUGAR_CANE
+    amount: 64
+  '26':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        RIPTIDE: 3
+  '12':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: DETECTOR_RAIL
+    amount: 3
+  '13':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ARROW
+  '24':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: SUGAR_CANE
+    amount: 6
+  '15':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: IRON_SHOVEL
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 8
+  '16':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: POWERED_RAIL
+    amount: 7
+  '17':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: CHEST_MINECART
+  '18':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ACTIVATOR_RAIL
+    amount: 4
+  '19':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: GOLDEN_APPLE
+    amount: 2
+  '21':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: GOLD_BLOCK
+    amount: 2
+  '4':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: LAPIS_LAZULI
+    amount: 31
+  '8':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: GLISTERING_MELON_SLICE
+    amount: 4
+  '1':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: MUTTON
+    amount: 5
+  '11':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: IRON_LEGGINGS
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      Damage: 15
+  '20':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: BUCKET
+  '23':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: TNT
+  '14':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: OAK_PLANKS
+    amount: 27
+  '25':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: NETHERITE_UPGRADE_SMITHING_TEMPLATE
+warps:
+- spawn;BrosSmp:2307.8810570763185:71.0:-613.523697780229:-89.015686:11.661487
+- tatti;BrosSmp_nether:17.30000001192093:62.0:-161.69999998807907:-79.773254:20.786419

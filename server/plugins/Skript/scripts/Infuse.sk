@@ -1,0 +1,618 @@
+# Infuse SMP Plugin
+
+# Support: https://discord.gg/starnova
+
+options:
+
+	# Plugin Settings
+
+	combatTag: true
+	# The Plugin's In-Built Combat Tag System | Defaults to True
+	# This makes it so if an attacker damages a player and they jump off something and get killed by fall damage, the plugin still assigns / removes effects
+	# If disabled, the plugin will only trigger if an attacker directly kills a player and not when they die through external means after being damaged
+	# There is no messages associated with the Combat Tag system, as it's meant to run silently.
+	
+	# This does not make a combat logging system, this is just for the plugin effect's system ONLY
+
+	combatTagTime: 8
+	# The time is a player is in the plugin's in-built combat tag system for if enabled, parsed in seconds | Defaults to 8
+
+	# Messages
+
+	positiveEffectGain: "&c❤ &8| &aYou gained a random positive effect by killing a player!" # When you gain a positive effect from killing someone
+	negativeEffectRemoval: "&c✔ &8| &aYou lost a negative effect by killing a player!" # When you lose a negative effect from killing someone
+	negativeEffectGain: "&c☠ &8| &cYou gained a negative effect by dying to a player!" # When you gain a negative effect from dying to someone
+	positiveEffectLoss: "&c☠ &8| &cYou lost a positive effect by dying to a player!" # When you lose a positive effect from dying to someone
+	maxNegativeEffects: "&c❌ &8| &cYou reached the maximum negative effects available to obtain!" # When you all of the negative effects, but you'll rise up again for sure to quadrillions and the richest and best out there forever
+	maxPositiveEffects: "&c❌ &8| &cYou reached the maximum positive effects available to obtain!" # When gain all of the positive effects
+	antiFarmingMessage: "&c❌ &8| &cThe player you have killed has maximum negative effects, and thus you cannot gain positive effect from killing them." # Messaage sent when the player is killing someone with max negative effects to deny positive effect gain
+	
+	# Maximum Effects
+	
+	maxEffectsPositive: 9
+	# Maximum Positive Effects a Player Can Obtain | Defaults to 9 (the maximum possible effects coded in is 9, going above this does nothing)
+	
+	maxEffectsNegative: 7
+	# Maximum Negative Effects a Player Can Obtain | Defaults to 7 (the maximum possible effects coded in is 7, going above this does nothing)
+	
+	# Debug Options
+	
+	version: "1.9.3" # DO NOT MODIFY
+
+on load:
+
+	delete {pe::*}
+	delete {ne::*}
+	add "Strength" to {pe::*}
+	add "Speed" to {pe::*}
+	add "Fire Resistance" to {pe::*}
+	add "Health Boost" to {pe::*}
+	add "Dolphins Grace" to {pe::*}
+	
+	# THE VALUE BELOW IS ACTUALLY HASTE, NOT REGEN
+	add "Regeneration" to {pe::*} # Regeneration is now haste, the value above is kept for compatibility purposes
+	# THE VALUE ABOVE IS ACTUALLY HASTE, NOT REGEN
+	
+	add "Water Breathing" to {pe::*}
+	add "Luck" to {pe::*}
+	add "Saturation" to {pe::*}
+	
+	add "Weakness" to {ne::*}
+	add "Slowness" to {ne::*}
+	add "Mining Fatigue" to {ne::*}
+	add "Jump Boost" to {ne::*}
+	add "Slow Falling" to {ne::*}
+	add "Hunger" to {ne::*}
+	add "Bad Luck" to {ne::*}
+	
+	delete {chatEffectReset::*}
+	
+	delete {combatTag::*}
+	
+	if {@combatTag} is true:
+		send "&cInfuse ✔ &8| &aCombat Log is Enabled! Disable it through the plugin's sk file." to console
+	
+	send "&cInfuse ✔ &8| &aData Loaded Successfully" to console
+
+command /infuse-effect-reset [<offline player>] [<string>]:
+	trigger:
+		if player has permission "infuse.effect-reset":
+			if arg-1 is set:
+				if arg-2 is set:
+					if {effect::%uuid of arg-1%::*} contains arg-2:
+						remove arg-2 from {effect::%uuid of arg-1%::*}
+						removeEffects(arg-1)
+						send "&aRemoved the %arg-2%&a effect from %arg-1%" to player
+					else:
+						send "&cThis player does not have this effect! If you'd like to reset all of this player's effects, do &7/infuse-effect-reset %arg-1%" to player
+				else:
+					if {effect::%uuid of arg-1%::*} is set:
+						delete {effect::%uuid of arg-1%::*}
+						removeEffects(arg-1)
+						send "&aReset %arg-1%&a's effects!" to player
+					else:
+						send "&cThis player does not have any effects!" to player
+			else:
+				set {chatEffectReset::%uuid of player%} to true
+			
+				send "&6&l⚡ Effect Reset ⚡" to player
+				send "&eYou've requested to reset this plugin's effect database" to player
+				send "" to player
+				send "&7This will &creset all stored effects in this plugin" to player
+				send "" to player
+				send "&7This means that &call of the Infuse SMP plugin's effect data will be wiped&7 and &ccannot&7 be &2rolled back again" to player
+				send "" to player
+				send "&7If you want to confirm this action type ""&aconfirm&7"" in chat or do &a/infuse-confirm" to player
+				send "&8This action will expire in 10 seconds" to player
+			
+				wait 10 seconds
+				if {chatEffectReset::%uuid of player%} is set:
+					delete {chatEffectReset::%uuid of player%} 
+					send "&7Action expired" to player
+		else:
+			send "&cYou cannot do this! &7(infuse.effect-reset)" to player
+			stop
+
+command /infuse-add-effect [<offline player>] [<string>]:
+	trigger:
+		if player has permission "infuse.add-effect":
+			if arg-1 is not set:
+				send "&cSpecify a player!" to player
+				stop
+			
+			if {pe::*} or {ne::*} does not contain arg-2:
+				send "&cSpecify a valid effect!" to player
+				stop
+			
+			add arg-2 to {effect::%uuid of arg-1%::*}
+			send "&aAdded Effect &6%arg-2%&a to &6%arg-1%&a's active effects!" to player
+		else:
+			send "&cYou cannot do this! &7(infuse.add-effect)" to player
+			stop
+
+command /infuse-confirm:
+	trigger:
+		if player has permission "infuse.effect-reset":
+			if {chatEffectReset::%uuid of player%} is set:
+				send "&aWiped all effects!" to player
+				delete {effect::*}
+				set {lastEffectReset} to now
+				delete {chatEffectReset::%uuid of player%}
+				delete {effectneg::*}
+				delete {effectLossMessage::*}
+				delete {respawnMessage::*}
+				loop all players:
+					removeEffects(loop-player-1)
+				send "&7You can use /infuse-debug debug to check the last effect reset date" to player
+			else:
+				send "&7You must first do &f/infuse-effect-reset&7 before using this command!" to player
+		else:
+			delete {chatEffectReset::%uuid of player%}
+			send "&cYou cannot do this! &7(infuse.effect-reset)" to player
+			stop
+			
+on chat:
+	if {chatEffectReset::%uuid of player%} is set:
+		cancel event
+		if player has permission "infuse.effect-reset":
+			if message is "confirm":
+				send "&aWiped all effects!" to player
+				delete {effect::*}
+				set {lastEffectReset} to now
+				delete {chatEffectReset::%uuid of player%}
+				delete {effectneg::*}
+				delete {effectLossMessage::*}
+				delete {respawnMessage::*}
+				send "&7You can use /infuse-debug debug to check the last effect reset date" to player
+		else:
+			delete {chatEffectReset::%uuid of player%}
+			send "&cYou cannot do this! &7(infuse.effect-reset)" to player
+			stop
+
+command /infuse-help:
+	aliases: /infuse-smp, /infuse, /infusesmp, /jos, /developer, /dev, /infuser, /effects
+	trigger:
+		send "" to player
+		send "&6★&l Commands" to player
+		send "" to player
+		send "&2/infuse-effect-reset &8| &7Resets the plugin's database as well as all stored effects &8(infuse.effect-reset)" to player
+		send "" to player
+		send "&2/infuse-debug &8| &7Debug commands as well useful tools for the plugin &8(infuse.debug)" to player
+		send "" to player
+		send "&2/infuse-help &8| &7Displays this message &8(none)" to player
+		send "" to player
+		send formatted "<##e78284>❇ Infuse SMP Plugin ❇" to player
+		send formatted "<##ea999c>&7» <##ea999c>&7&n<link:https://www.spigotmc.org/resources/infuse-smp-skript-free-drag-drop.103749/>Plugin Download&7 (Click Me!)" to player
+		send "" to player
+		send formatted "<##81c8be>☕ Commission Discord » <##81c8be>&n<link:https://discord.gg/7H2THJNBQX>https://discord.gg/7H2THJNBQX" to player
+		send "" to player
+		send formatted "<##eebebe>&e⚡ Plugin made by SkipTurn &7(Dank JosBot##1001)" to player
+		send "" to player
+		send "&7Running Version %{@version}%&7-FREE" to player
+		send "" to player
+
+every 8 seconds:
+	applyEffects()
+
+command /infuse-debug [<text>]:
+	trigger:
+		if player has permission "infuse.debug":
+			if arg-1 is "messages":
+				send {@positiveEffectGain} to player
+				send {@negativeEffectRemoval} to player
+				send {@negativeEffectGain} to player
+				send {@positiveEffectLoss} to player
+				send {@maxPositiveEffects} to player
+			else if arg-1 is "debug":
+				send "" to player
+				send formatted "<##e78284>❇ Infuse SMP Plugin ❇" to player
+				send formatted "<##ea999c>&7» <##ea999c>&7&n<link:https://www.spigotmc.org/resources/infuse-smp-skript-free-drag-drop.103749/>Plugin Download&7 (Click Me!)" to player
+				send "" to player
+				send formatted "<##81c8be>☕ Commission Discord » <##81c8be>&n<link:https://discord.gg/7H2THJNBQX>https://discord.gg/7H2THJNBQX" to player
+				send "" to player
+				send formatted "<##eebebe>&e⚡ Plugin made by SkipTurn &7(Dank JosBot##1001)" to player
+				send "" to player
+				send "&6Debug Information" to player
+				set {_ver} to {@version}
+				send "&cVersion&8 »&7 %{_ver}%" to player
+				loop all players:
+					add size of {effect::%uuid of loop-player%} to {_size}
+				if {_size} is set:
+					send "&cLoaded Effects&8 » &7%{_size}%" to player
+				else:
+					send "&cLoaded Effects&8 » &70" to player
+				send "&cLoaded Messages &8»" to player
+				send {@positiveEffectGain} to player
+				send {@negativeEffectRemoval} to player
+				send {@negativeEffectGain} to player
+				send {@positiveEffectLoss} to player
+				send {@maxPositiveEffects} to player
+				if {lastEffectReset} is set:
+					send "&cLast Effect Reset&8 » &7%{lastEffectReset}%" to player
+				else:
+					send "&cLast Effect Reset &7(/infuse-debug effectReset)&8 » &7Never" to player
+				send "" to player
+			else:
+				send "&cThis is not a valid arguement! Valid arguements are &7messages&c and &7debug" to player
+		else:
+			send "&cYou cannot do this! &7(infuse.debug)" to player
+			stop
+
+on damage:
+	if {@combatTag} is true:
+		if attacker is a player:
+			if victim is a player:
+			
+				set {combatTag::%uuid of victim%} to uuid of attacker
+				
+				loop {@combatTagTime} times:
+					wait 1 seconds
+				
+				delete {combatTag::%uuid of victim%}
+
+on death:
+	if victim is a player:
+		if attacker is a player:
+		
+			if {effectneg::%uuid of attacker%} is not set:
+				
+				set {_sziMax} to size of {effect::%uuid of attacker%::*}
+				
+				if {_sziMax} >= {@maxEffectsPositive}:
+					send {@maxPositiveEffects} to attacker
+				else:
+					set {_neLoop::*} to {ne::*}
+					loop {_neLoop::*}:
+						if {effect::%uuid of victim%::*} contains loop-value:
+							add 1 to {_count}
+			
+					if {_count} >= size of {ne::*}:
+						set {_farming} to true
+				
+					set {_peLoop::*} to {pe::*}
+					loop {_peLoop::*}:
+						if {effect::%uuid of attacker%::*} contains loop-value:
+							remove loop-value from {_peLoop::*}
+				
+					if {_farming} is not set:
+						set {_effect} to random element out of {_peLoop::*}
+			
+					if {_effect} is set:
+						if {_peLoop::*} contains {_effect}:
+							add {_effect} to {effect::%uuid of attacker%::*}
+				
+					if {_effect} is set:
+						send {@positiveEffectGain} to attacker
+						send "&7You gained %{_effect}%&7!" to attacker
+					else:
+						if {_farming} is not set:
+							send {@maxPositiveEffects} to attacker
+						else:
+							send {@antiFarmingMessage} to attacker
+		
+			else:
+				
+				loop {effect::%uuid of attacker%::*}:
+					if {ne::*} contains loop-value:
+						set {_loopVal} to true
+						set {_effect} to loop-value
+						exit loop
+				
+				if {_effect} is set:
+					remove {_effect} from {effect::%uuid of attacker%::*}
+					removeNeg(attacker)
+				
+				if {_effect} is set:
+					send {@negativeEffectRemoval} to attacker
+					send "&7You lost %{_effect}%" to attacker
+				else:
+					delete {effectneg::%uuid of attacker%}
+					
+					set {_neLoop::*} to {ne::*}
+					loop {_neLoop::*}:
+						if {effect::%uuid of victim%::*} contains loop-value:
+							add 1 to {_count}
+				
+					if {_count} >= size of {ne::*}:
+						set {_farming} to true
+					
+					set {_peLoop::*} to {pe::*}
+					loop {_peLoop::*}:
+						if {effect::%uuid of attacker%::*} contains loop-value:
+							remove loop-value from {_peLoop::*}
+					
+					if {_farming} is not set:
+						set {_effect} to random element out of {_peLoop::*}
+					
+					if {_effect} is set:
+						if {_peLoop::*} contains {_effect}:
+							add {_effect} to {effect::%uuid of attacker%::*}
+					
+					if {_effect} is set:
+						send {@positiveEffectGain} to attacker
+						send "&7You gained %{_effect}%&7!" to attacker
+					else:
+						if {_farming} is not set:
+							send {@maxPositiveEffects} to attacker
+						else:
+							send {@antiFarmingMessage} to attacker
+			
+			loop {effect::%uuid of victim%::*}:
+				if {pe::*} contains loop-value:
+					set {_val} to true
+					exit loop
+			
+			if {_val} is set:
+			
+				loop 25 times:
+					set {_effect} to random element out of {effect::%uuid of victim%::*}
+					if {ne::*} does not contain {_effect}:
+						remove {_effect} from {effect::%uuid of victim%::*}
+						wait 1 ticks
+						set {effectLossMessage::%uuid of victim%} to true
+						set {respawnMessage::%uuid of victim%} to {_effect}
+						delete {_effect}
+						exit loop
+			
+			else:
+				
+				set {_sziMax} to size of {effect::%uuid of victim%::*}
+				
+				if {_sziMax} >= {@maxEffectsNegative}:
+					send {@maxNegativeEffects} to attacker
+				else:
+				
+					loop {ne::*}:
+						if {effect::%uuid of victim%::*} does not contain loop-value:
+							set {_effect} to loop-value
+							exit loop
+				
+					if {_effect} is set:
+						add {_effect} to {effect::%uuid of victim%::*}
+					else:
+						send {@maxNegativeEffects} to victim
+						set {effectneg::%uuid of victim%} to true
+						
+						if {_effect} is set:
+							set {respawnMessage::%uuid of victim%} to {_effect}
+					
+						stop
+				
+					set {effectneg::%uuid of victim%} to true
+			
+			if {_effect} is set:
+				set {respawnMessage::%uuid of victim%} to {_effect}
+	
+	else if {combatTag::%uuid of victim%} is set:
+		if {@combatTag} is true:
+
+			set {_a} to {combatTag::%uuid of victim%} parsed as player
+		
+			if {effectneg::%{combatTag::%uuid of victim%}%} is not set:
+				
+				set {_sziMax} to size of {effect::%uuid of victim%::*}
+				
+				if {_sziMax} >= {@maxEffectsNegative}:
+					send {@maxNegativeEffects} to attacker
+				else:
+					set {_neLoop::*} to {ne::*}
+					loop {_neLoop::*}:
+						if {effect::%uuid of victim%::*} contains loop-value:
+							add 1 to {_count}
+				
+					if {_count} >= size of {ne::*}:
+						set {_farming} to true
+				
+					set {_peLoop::*} to {pe::*}
+					loop {_peLoop::*}:
+						if {effect::%{combatTag::%uuid of victim%}%::*} contains loop-value:
+							remove loop-value from {_peLoop::*}
+				
+					if {_farming} is not set:
+						set {_effect} to random element out of {_peLoop::*}
+					
+					if {_effect} is set:
+						if {_peLoop::*} contains {_effect}:
+							add {_effect} to {effect::%{combatTag::%uuid of victim%}%::*}
+					
+					if {_effect} is set:
+						send {@positiveEffectGain} to {_a}
+						send "&7You gained %{_effect}%&7!" to {_a}
+					else:
+						if {_farming} is not set:
+							send {@maxPositiveEffects} to {_a}
+						else:
+							send {@antiFarmingMessage} to {_a}
+			
+			else:
+				
+				loop {effect::%{combatTag::%uuid of victim%}%::*}:
+					if {ne::*} contains loop-value:
+						set {_loopVal} to true
+						set {_effect} to loop-value
+						exit loop
+				
+				if {_effect} is set:
+					remove {_effect} from {effect::%{combatTag::%uuid of victim%}%::*}
+				
+				if {_effect} is set:
+					send {@negativeEffectRemoval} to {_a}
+					
+					remove {_effect} from potion effects of {_a}
+				else:
+					delete {effectneg::%{combatTag::%uuid of victim%}%}
+					
+					set {_neLoop::*} to {ne::*}
+					loop {_neLoop::*}:
+						if {effect::%uuid of victim%::*} contains loop-value:
+							add 1 to {_count}
+				
+					if {_count} >= size of {ne::*}:
+						set {_farming} to true
+					
+					set {_peLoop::*} to {pe::*}
+					loop {_peLoop::*}:
+						if {effect::%{combatTag::%uuid of victim%}%::*} contains loop-value:
+							remove loop-value from {_peLoop::*}
+					
+					if {_farming} is not set:
+						set {_effect} to random element out of {_peLoop::*}
+					
+					if {_effect} is set:
+						if {_peLoop::*} contains {_effect}:
+							add {_effect} to {effect::%{combatTag::%uuid of victim%}%::*}
+					
+					if {_effect} is set:
+						send {@positiveEffectGain} to {_a}
+						send "&7You gained %{_effect}%&7!" to {_a}
+					else:
+						if {_farming} is not set:
+							send {@maxPositiveEffects} to {_a}
+						else:
+							send {@antiFarmingMessage} to {_a}
+			
+			loop {effect::%uuid of victim%::*}:
+				if {pe::*} contains loop-value:
+					set {_val} to true
+					exit loop
+			
+			if {_val} is set:
+			
+				loop 25 times:
+					set {_effect} to random element out of {effect::%uuid of victim%::*}
+					if {ne::*} does not contain {_effect}:
+						remove {_effect} from {effect::%uuid of victim%::*}
+						wait 1 ticks
+						set {effectLossMessage::%uuid of victim%} to true
+						set {respawnMessage::%uuid of victim%} to {_effect}
+						delete {_effect}
+						exit loop
+			
+			else:
+				
+				loop {ne::*}:
+					if {effect::%uuid of victim%::*} does not contain loop-value:
+						set {_effect} to loop-value
+						exit loop
+				
+				if {_effect} is set:
+					add {_effect} to {effect::%uuid of victim%::*}
+				else:
+					send {@maxNegativeEffects} to victim
+					set {effectneg::%uuid of victim%} to true
+					
+					if {_effect} is set:
+						set {respawnMessage::%uuid of victim%} to {_effect}
+					
+					stop
+				
+				set {effectneg::%uuid of victim%} to true
+			
+			if {_effect} is set:
+				set {respawnMessage::%uuid of victim%} to {_effect}
+
+on respawn:
+	if {respawnMessage::%uuid of player%} is set:
+		wait 1 ticks
+		if {effectLossMessage::%uuid of player%} is not set:
+			send {@negativeEffectGain} to player
+			send "&7You gained %{respawnMessage::%uuid of player%}%&7!" to player
+		else:
+			send {@positiveEffectLoss} to player
+			send "&7You lost %{respawnMessage::%uuid of player%}%&7!" to player
+		delete {effectLossMessage::%uuid of player%}
+		delete {respawnMessage::%uuid of player%}
+
+on join:
+	if {respawnMessage::%uuid of player%} is set:
+		wait 1 ticks
+		if {effectLossMessage::%uuid of player%} is not set:
+			send {@negativeEffectGain} to player
+			send "&7You gained %{respawnMessage::%uuid of player%}%&7!" to player
+		else:
+			send {@positiveEffectLoss} to player
+			send "&7You lost %{respawnMessage::%uuid of player%}%&7!" to player
+		delete {effectLossMessage::%uuid of player%}
+		delete {respawnMessage::%uuid of player%}
+
+function applyEffects():
+
+	loop all players:
+		if {_doNotModify} is not set:
+			
+			loop {effect::%uuid of loop-player%::*}:
+				
+				if {effect::%uuid of loop-player%::*} contains "Weakness":
+					apply potion of Weakness of tier 1 to the loop-player for 999 days
+	
+				if {effect::%uuid of loop-player%::*} contains "Slowness":
+					apply potion of Slowness of tier 1 to the loop-player for 999 days
+	
+				if {effect::%uuid of loop-player%::*} contains "Mining Fatigue":
+					apply potion of Mining Fatigue of tier 1 to the loop-player for 999 days
+	
+				if {effect::%uuid of loop-player%::*} contains "Jump Boost":
+					apply potion of Jump Boost of tier 1 to the loop-player for 999 days
+	
+				if {effect::%uuid of loop-player%::*} contains "Slow Falling":
+					apply potion of Slow Falling of tier 1 to the loop-player for 999 days
+	
+				if {effect::%uuid of loop-player%::*} contains "Hunger":
+					apply potion of Hunger of tier 1 to the loop-player for 999 days
+	
+				if {effect::%uuid of loop-player%::*} contains "Bad Luck":
+					apply potion of Bad Luck of tier 1 to the loop-player for 999 days
+						
+				if {effect::%uuid of loop-player%::*} contains "Strength":
+					apply potion of strength of tier 1 to the loop-player for 999 days
+	
+				if {effect::%uuid of loop-player%::*} contains "Speed":
+					apply potion of Speed of tier 1 to the loop-player for 999 days
+	
+				if {effect::%uuid of loop-player%::*} contains "Fire Resistance":
+					apply potion of Fire Resistance of tier 1 to the loop-player for 999 days
+
+				if {effect::%uuid of loop-player%::*} contains "Health Boost":
+					apply potion of Health Boost of tier 1 to the loop-player for 999 days
+
+				if {effect::%uuid of loop-player%::*} contains "Dolphins Grace":
+					apply potion of Dolphins Grace of tier 1 to the loop-player for 999 days
+	
+				if {effect::%uuid of loop-player%::*} contains "Regeneration":
+					apply potion of Haste of tier 1 to the loop-player for 999 days
+	
+				if {effect::%uuid of loop-player%::*} contains "Water Breathing":
+					apply potion of Water Breathing of tier 1 to the loop-player for 999 days
+	
+				if {effect::%uuid of loop-player%::*} contains "Luck":
+					apply potion of Luck of tier 1 to the loop-player for 999 days
+	
+				if {effect::%uuid of loop-player%::*} contains "Saturation":
+					apply potion of Saturation of tier 1 to the loop-player for 999 days
+
+function removeNeg(p: player):
+	remove weakness from potion effects of {_p}
+	remove slowness from potion effects of {_p}
+	remove mining fatigue from potion effects of {_p}
+	remove jump boost from potion effects of {_p}
+	remove slow falling from potion effects of {_p}
+	remove hunger from potion effects of {_p}
+	remove bad luck from potion effects of {_p}
+
+function removeEffects(p: player):
+
+	remove strength from potion effects of {_p}
+	remove speed from potion effects of {_p}
+	remove fire resistance from potion effects of {_p}
+	remove health boost from potion effects of {_p}
+	remove dolphins grace from potion effects of {_p}
+	remove haste from potion effects of {_p}
+	remove water breathing from potion effects of {_p}
+	remove luck from potion effects of {_p}
+	remove saturation from potion effects of {_p}
+	
+	remove mining fatigue from potion effects of {_p}
+	remove jump boost from potion effects of {_p}
+	remove slow falling from potion effects of {_p}
+	remove hunger from potion effects of {_p}
+	remove bad luck from potion effects of {_p}

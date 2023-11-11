@@ -1,0 +1,16 @@
+name: DARKNESS
+description: ''
+open: false
+pvp: false
+home: BossSmp:4090.699999988079:73.0:3439.300000011921:-127.95026:47.999985
+color: '5'
+chests: []
+players:
+- 7a031f98-de6f-3506-b870-49e3405775af,OWNER
+- 88f4d118-73f1-340d-ae54-4abab60def03,DEFAULT
+- dfc44fc2-5f1d-3f60-a5c1-038720224231,DEFAULT
+level: 1
+tag: ''
+score: 3
+allyrequests:
+- efb18f58-05b6-46bd-bb86-8d333feea4ab

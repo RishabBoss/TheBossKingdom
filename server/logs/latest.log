@@ -1,0 +1,286 @@
+[09:00:24] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[09:00:27] [ServerMain/INFO]: Loaded 7 recipes
+[09:00:28] [Server thread/INFO]: Starting minecraft server version 1.20
+[09:00:28] [Server thread/INFO]: Loading properties
+[09:00:28] [Server thread/INFO]: This server is running Paper version git-Paper-17 (MC: 1.20) (Implementing API version 1.20-R0.1-SNAPSHOT) (Git: c287e92)
+[09:00:28] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[09:00:28] [Server thread/INFO]: Using 4 threads for Netty based IO
+[09:00:29] [Server thread/WARN]: [!] The timings profiler has been enabled but has been scheduled for removal from Paper in the future.
+    We recommend installing the spark profiler as a replacement: https://spark.lucko.me/
+    For more information please visit: https://github.com/PaperMC/Paper/issues/8948
+[09:00:29] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 1 worker threads, and gen parallelism of 1 threads
+[09:00:29] [Server thread/INFO]: Default game type: SURVIVAL
+[09:00:29] [Server thread/INFO]: Generating keypair
+[09:00:29] [Server thread/INFO]: Starting Minecraft server on 0.0.0.0:25292
+[09:00:29] [Server thread/INFO]: Using epoll channel type
+[09:00:29] [Server thread/INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
+[09:00:29] [Server thread/INFO]: Paper: Using OpenSSL 3.0.x (Linux x86_64) cipher from Velocity.
+[09:00:32] [Server thread/INFO]: [STDOUT] [9PLkhm0UUf7L]  Downloaded from https://directleaks.net 
+[09:00:32] [Server thread/WARN]: [org.bukkit.craftbukkit.v1_20_R1.legacy.CraftLegacy] Initializing Legacy Material Support. Unless you have legacy plugins and/or data this is a bug!
+[09:00:39] [Server thread/WARN]: Legacy plugin OnePlayerSleep v1.3 does not specify an api-version.
+[09:00:39] [Server thread/WARN]: Legacy plugin SimpleTpa v6.4 does not specify an api-version.
+[09:00:39] [Server thread/WARN]: Legacy plugin NoEndPortals v1.3 does not specify an api-version.
+[09:00:39] [Server thread/WARN]: Legacy plugin NoTNT v1.8 does not specify an api-version.
+[09:00:39] [Server thread/INFO]: [ViaVersion] Loading server plugin ViaVersion v4.8.1
+[09:00:39] [Server thread/INFO]: [ViaVersion] ViaVersion 4.8.1 is now loaded. Registering protocol transformers and injecting...
+[09:00:40] [Via-Mappingloader-0/INFO]: [ViaVersion] Loading block connection mappings ...
+[09:00:40] [Server thread/INFO]: [ViaBackwards] Loading translations...
+[09:00:40] [Server thread/INFO]: [ViaBackwards] Registering protocols...
+[09:00:40] [Via-Mappingloader-0/INFO]: [ViaVersion] Using FastUtil Long2ObjectOpenHashMap for block connections
+[09:00:41] [Server thread/INFO]: [mcMMO] Loading server plugin mcMMO v2.1.224
+[09:00:41] [Server thread/INFO]: [Skript] Loading server plugin Skript v2.6.4
+[09:00:41] [Server thread/INFO]: [ViaBackwards] Loading server plugin ViaBackwards v4.8.1
+[09:00:41] [Server thread/INFO]: [ProtocolLib] Loading server plugin ProtocolLib v5.1.1-SNAPSHOT-669
+[09:00:42] [Server thread/INFO]: [DiscordSRV] Loading server plugin DiscordSRV v1.26.2
+[09:00:42] [Server thread/INFO]: [OnePlayerSleep] Loading server plugin OnePlayerSleep v1.3
+[09:00:42] [Server thread/INFO]: [HealthBar-Reloaded] Loading server plugin HealthBar-Reloaded v2.0.3.2
+[09:00:42] [Server thread/INFO]: [ViaRewind] Loading server plugin ViaRewind v3.0.0
+[09:00:42] [Server thread/INFO]: [SkinsRestorer] Loading server plugin SkinsRestorer v15.0.3
+[09:00:42] [Server thread/INFO]: [LiteAntiCheat] Loading server plugin LiteAntiCheat v1.0.4
+[09:00:42] [Server thread/INFO]: [SimpleTpa] Loading server plugin SimpleTpa v6.4
+[09:00:42] [Server thread/INFO]: [CrisTreeCapitator] Loading server plugin CrisTreeCapitator v6.4.4
+[09:00:42] [Server thread/INFO]: [NoPlugins] Loading server plugin NoPlugins v8.1
+[09:00:42] [Server thread/INFO]: [NoEndPortals] Loading server plugin NoEndPortals v1.3
+[09:00:42] [Server thread/INFO]: [UltimateAutoRestart] Loading server plugin UltimateAutoRestart vBuild 54a
+[09:00:42] [Server thread/INFO]: [AFKPlus] Loading server plugin AFKPlus v3.4.1
+[09:00:42] [Server thread/INFO]: [NoBoom] Loading server plugin NoBoom v1.2
+[09:00:42] [Server thread/INFO]: [BetterTeams] Loading server plugin BetterTeams v4.8.1
+[09:00:42] [Server thread/INFO]: [BetterTeams] Checking if the file config.yml is up to date
+[09:00:42] [Server thread/INFO]: [BetterTeams] File is up to date
+[09:00:42] [Server thread/INFO]: [NoTNT] Loading server plugin NoTNT v1.8
+[09:00:42] [Server thread/INFO]: [SkBee] Loading server plugin SkBee v2.18.3
+[09:00:42] [Server thread/INFO]: [LoginSecurity] Loading server plugin LoginSecurity v3.2.1
+[09:00:42] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[09:00:42] [Server thread/INFO]: [ProtocolLib] Enabling ProtocolLib v5.1.1-SNAPSHOT-669
+[09:00:42] [Server thread/INFO]: [ViaRewind] Enabling ViaRewind v3.0.0
+[09:00:42] [Server thread/INFO]: [SkinsRestorer] Enabling SkinsRestorer v15.0.3
+[09:00:43] [Server thread/INFO]: [SkinsRestorer] Detected Minecraft v1_20_R1, using MappingSpigotSkinRefresher.
+[09:00:43] [Server thread/INFO]: [SkinsRestorer] Using paper join listener!
+[09:00:43] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[09:00:43] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[09:00:43] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[09:00:43] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[09:00:43] [Server thread/INFO]: Preparing level "BossSmp"
+[09:00:44] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[09:00:45] [Server thread/INFO]: Time elapsed: 398 ms
+[09:00:45] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[09:00:45] [Server thread/INFO]: Time elapsed: 171 ms
+[09:00:45] [Server thread/INFO]: [ViaVersion] Enabling ViaVersion v4.8.1
+[09:00:45] [Server thread/INFO]: [ViaVersion] ViaVersion detected server version: 1.20/1.20.1 (763)
+[09:00:45] [Server thread/INFO]: [mcMMO] Enabling mcMMO v2.1.224
+[09:00:48] [Server thread/INFO]: [Skript] Enabling Skript v2.6.4
+[09:00:49] [Thread-8/INFO]: [Skript] A new version of Skript is available: 2.7.2 (you're currently running 2.6.4)
+[09:00:49] [Thread-8/INFO]: Download it at: <aqua><u><link:https://github.com/SkriptLang/Skript/releases/download/2.7.2/Skript.jar>https://github.com/SkriptLang/Skript/releases/download/2.7.2/Skript.jar
+[09:01:03] [Server thread/INFO]: [Skript] Loaded 153763 aliases in 13486ms
+[09:01:04] [Server thread/INFO]: [Skript]  ~ created by & © Peter Güttinger aka Njol ~
+[09:01:04] [Server thread/INFO]: [ViaBackwards] Enabling ViaBackwards v4.8.1
+[09:01:04] [Server thread/INFO]: [DiscordSRV] Enabling DiscordSRV v1.26.2
+[09:01:04] [Server thread/INFO]: [OnePlayerSleep] Enabling OnePlayerSleep v1.3*
+[09:01:04] [Server thread/INFO]: [HealthBar-Reloaded] Enabling HealthBar-Reloaded v2.0.3.2
+[09:01:04] [Server thread/INFO]: [LiteAntiCheat] Enabling LiteAntiCheat v1.0.4
+[09:01:04] [pool-20-thread-1/INFO]: [DiscordSRV] DiscordSRV is up-to-date. (767828469573c2f0fa3ed5a44feb0b2f15f2c02d)
+[09:01:05] [Server thread/INFO]: [SimpleTpa] Enabling SimpleTpa v6.4*
+[09:01:05] [Server thread/INFO]: [SimpleTpa] If you need support contact me at https://discord.gg/SZUkza9
+[09:01:05] [Server thread/INFO]: [SimpleTpa] Simple Tpa has been enabled on version 6.4
+[09:01:05] [Server thread/INFO]: Enabled metrics. You may opt-out by changing plugins/bStats/config.yml
+[09:01:05] [Server thread/INFO]: [CrisTreeCapitator] Enabling CrisTreeCapitator v6.4.4
+[09:01:05] [Server thread/INFO]: [CrisTreeCapitator] WorldGuard not found. Maybe WorldGuard or this plugin are not up to date?
+[09:01:05] [Server thread/INFO]: [CrisTreeCapitator] Logs from JSON: [OAK_LOG, OAK_LOG, OAK_LOG, OAK_LOG]
+[09:01:05] [Server thread/INFO]: [CrisTreeCapitator] Leaves from JSON: [OAK_LEAVES, OAK_LEAVES, OAK_LEAVES, OAK_LEAVES]
+[09:01:05] [Server thread/INFO]: [CrisTreeCapitator] Enabled
+[09:01:05] [Server thread/INFO]: [NoPlugins] Enabling NoPlugins v8.1
+[09:01:05] [Server thread/INFO]: [NoPlugins] Minecraft version: v1_20_R1
+[09:01:05] [Server thread/INFO]: [NoPlugins] Loaded assets for newer minecraft (1.13+)
+[09:01:05] [Server thread/INFO]: [NoPlugins] Successfully loaded.
+[09:01:05] [Server thread/INFO]: [NoEndPortals] Enabling NoEndPortals v1.3*
+[09:01:05] [Server thread/INFO]: [UltimateAutoRestart] Enabling UltimateAutoRestart vBuild 54a
+[09:01:05] [Server thread/INFO]: [UltimateAutoRestart] Build 54a, a free resource by Norska - Thanks for downloading!
+[09:01:05] [Server thread/INFO]: [UltimateAutoRestart] Attempting hooks...
+[09:01:05] [DiscordSRV - Initialization/INFO]: [DiscordSRV] [JDA] Login Successful!
+[09:01:05] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] [JDA] Connected to WebSocket
+[09:01:05] [Server thread/WARN]: java.net.MalformedURLException: no protocol: 
+[09:01:05] [Server thread/WARN]: 	at java.base/java.net.URL.<init>(URL.java:674)
+[09:01:05] [Server thread/WARN]: 	at java.base/java.net.URL.<init>(URL.java:569)
+[09:01:05] [Server thread/WARN]: 	at java.base/java.net.URL.<init>(URL.java:516)
+[09:01:05] [Server thread/WARN]: 	at UltimateAutoRestart Build 54a.jar//dev.norska.uar.utils.DiscordWebhook.execute(DiscordWebhook.java:140)
+[09:01:05] [Server thread/WARN]: 	at UltimateAutoRestart Build 54a.jar//dev.norska.uar.utils.WebhookSender.sendWebhook(WebhookSender.java:79)
+[09:01:05] [Server thread/WARN]: 	at UltimateAutoRestart Build 54a.jar//dev.norska.uar.UltimateAutoRestart.onEnable(UltimateAutoRestart.java:79)
+[09:01:05] [Server thread/WARN]: 	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:281)
+[09:01:05] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperPluginInstanceManager.enablePlugin(PaperPluginInstanceManager.java:189)
+[09:01:05] [Server thread/WARN]: 	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.enablePlugin(PaperPluginManagerImpl.java:104)
+[09:01:05] [Server thread/WARN]: 	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:507)
+[09:01:05] [Server thread/WARN]: 	at org.bukkit.craftbukkit.v1_20_R1.CraftServer.enablePlugin(CraftServer.java:562)
+[09:01:05] [Server thread/WARN]: 	at org.bukkit.craftbukkit.v1_20_R1.CraftServer.enablePlugins(CraftServer.java:473)
+[09:01:05] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.loadWorld0(MinecraftServer.java:636)
+[09:01:05] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.loadLevel(MinecraftServer.java:435)
+[09:01:05] [Server thread/WARN]: 	at net.minecraft.server.dedicated.DedicatedServer.e(DedicatedServer.java:308)
+[09:01:05] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.w(MinecraftServer.java:1101)
+[09:01:05] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:318)
+[09:01:05] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:840)
+[09:01:05] [Server thread/INFO]: [AFKPlus] Enabling AFKPlus v3.4.1
+[09:01:06] [Server thread/INFO]: [AFKPlus] AFKPlus v.3.4.1 has been enabled!
+[09:01:06] [Server thread/INFO]: [NoBoom] Enabling NoBoom v1.2
+[09:01:06] [Server thread/INFO]: [BetterTeams] Enabling BetterTeams v4.8.1
+[09:01:06] [Server thread/INFO]: [BetterTeams] Checking if the file messages.yml is up to date
+[09:01:06] [Server thread/INFO]: [BetterTeams] File is up to date
+[09:01:06] [Server thread/INFO]: Display team name config value: prefix
+[09:01:06] [Server thread/INFO]: Loading below name. Type: PREFIX
+[09:01:06] [Server thread/INFO]: teamManagement declared: com.booksaw.betterTeams.events.MCTeamManagement@268bcfca
+[09:01:06] [Server thread/INFO]: [NoTNT] Enabling NoTNT v1.8*
+[09:01:06] [Server thread/INFO]: NoTNT v1.8 has been enabled.
+[09:01:06] [Server thread/INFO]: NoTNT is running v1.4 config.
+[09:01:06] [Server thread/INFO]: [SkBee] Enabling SkBee v2.18.3
+[09:01:06] [Server thread/INFO]: [SkBee] Loading NBTApi...
+[09:01:06] [Server thread/INFO]: [SkBee] [NBTAPI] Found Spigot: v1_20_R1! Trying to find NMS support
+[09:01:06] [Server thread/INFO]: [SkBee] [NBTAPI] NMS support 'MC1_20_R1' loaded!
+[09:01:06] [Server thread/INFO]: [SkBee] Successfully loaded NBTApi!
+[09:01:06] [Server thread/INFO]: [SkBee] NBT Elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Text Component Elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Advancement Elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] BossBar Elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Bound Elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Display Entity elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Fishing elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Game Event Elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Particle Elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] RayTrace elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Recipe Elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Scoreboard Elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Scoreboard Objective Elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Statistic Elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Structure Elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Minecraft Tag elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Team Elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Villager Elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Virtual Furnace Elements disabled via config
+[09:01:06] [Server thread/INFO]: [SkBee] World Border Elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] World Creator Elements successfully loaded
+[09:01:06] [Server thread/INFO]: [SkBee] Loaded (351) elements:
+[09:01:06] [Server thread/INFO]: [SkBee]  - 50 events
+[09:01:06] [Server thread/INFO]: [SkBee]  - 50 effects
+[09:01:06] [Server thread/INFO]: [SkBee]  - 227 expressions
+[09:01:06] [Server thread/INFO]: [SkBee]  - 21 conditions
+[09:01:06] [Server thread/INFO]: [SkBee]  - 3 sections
+[09:01:06] [Server thread/INFO]: [SkBee] Checking for update...
+[09:01:06] [Server thread/INFO]: [SkBee] Plugin is not up to date!
+[09:01:06] [Server thread/INFO]: [SkBee]  - Current version: v2.18.3
+[09:01:06] [Server thread/INFO]: [SkBee]  - Available update: v2.18.4
+[09:01:06] [Server thread/INFO]: [SkBee]  - Download available at: https://github.com/ShaneBeee/SkBee/releases
+[09:01:06] [Server thread/INFO]: [SkBee] Successfully enabled v2.18.3 in 0.74 seconds
+[09:01:06] [Server thread/INFO]: [LoginSecurity] Enabling LoginSecurity v3.2.1
+[09:01:06] [Server thread/INFO]: [LoginSecurity] Loading base translations from "en_us"
+[09:01:06] [Server thread/INFO]: [LoginSecurity] Loading specified translations from "en_us"
+[09:01:07] [Server thread/INFO]: [LoginSecurity] Registering commands...
+[09:01:07] [Server thread/INFO]: [LoginSecurity] Registering listeners...
+[09:01:07] [Server thread/INFO]: [LoginSecurity] Using 1.12+ map captcha renderer
+[09:01:07] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] [JDA] Finished Loading!
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] Found server G:BossKingdom #Comeback!(1090560322760347649)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲┌○🍁〢ᴡᴇʟᴄᴏᴍᴇ(1170021482534010981)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲└🍁〢ʙʏᴇ(1170021486468284436)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲┌🥂〢ᴀɴᴏᴜɴᴄᴇᴍᴇɴᴛ(1090560323364327453)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲├🥂〢ʀᴜʟᴇs(1090560323179782202)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲├🥂〢ʙᴏᴏꜱᴛᴇʀ(1170021497935515748)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲├🥂〢ᴇʟᴇᴄᴛɪᴏɴs(1170699702283542568)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲├🥂〢ɪɴғᴏs(1170021502406635661)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲└🥂〢ꜱᴇʟꜰ-ʀᴏʟᴇ(1170021501316120626)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲┌𒋝🥀〢ᴄʜᴀᴛ(1170021509310447788)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲├𒋝🥀〢ᴍᴇᴅɪᴀ-sʜᴀʀᴇ(1170021512892383253)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲├𒋝🥀〢eᴅɪᴛs(1170987373417467985)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲├𒋝🥀〢sᴀɴsᴋᴀʀɪ(1170246299141021736)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲├𒋝🥀〢ʟᴇᴠᴇʟ-ᴜᴘ(1170021514377166899)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲└𒋝🥀〢ʙᴏᴛ-ᴄᴏᴍᴍᴀɴᴅ(1170021521058697336)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲┌💐〢sᴍᴘ-ɪᴘ(1170021536133029899)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲├💐〢tᴇxᴛᴜʀᴇ-pᴀᴄᴋ(1170352200250302545)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲├💐〢sᴍᴘ-ɪɴғᴏ(1170021538049830963)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲├💐〢sᴍᴘ-ᴄʜᴀᴛ(1170047103700045844)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲├💐〢sᴍᴘ-ᴄᴏɴsᴏʟᴇ(1170047230720344084)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲└💐〢ᴡʜɪᴛᴇʟɪsᴛ-ʀᴇǫ(1170021539421376592)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲┌🎪〢ᴅᴀɴᴋ-ᴍᴇᴍᴇʀ(1170021522040160269)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲├🎪〢ᴏᴡᴏ(1170021525328498830)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲└🎪〢ᴀᴋɪɴᴀᴛᴏʀ(1170397526994735145)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:🜲├🥀○〢ᴍᴜsɪᴄ-ᴄᴏᴍᴍᴀɴᴅs(1170021543129133096)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:staffs-only(1170021459972862105)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:storage(1170031307217195109)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:⚡〢message-logs(1170021554067886091)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] - TC:⚡〢user-logs(1170021556118880327)
+[09:01:07] [DiscordSRV - Initialization/INFO]: [DiscordSRV] Console forwarding assigned to channel TC:🜲├💐〢sᴍᴘ-ᴄᴏɴsᴏʟᴇ(1170047230720344084)
+[09:01:07] [Server thread/INFO]: Running delayed init tasks
+[09:01:07] [Craft Scheduler Thread - 4 - ViaVersion/INFO]: [ViaVersion] Finished mapping loading, shutting down loader executor!
+[09:01:07] [Server thread/INFO]: [Skript] Loading variables...
+[09:01:07] [Craft Scheduler Thread - 10 - AFKPlus/INFO]: [AFKPlus] AFKPlus file watcher started!
+[09:01:07] [Craft Scheduler Thread - 5 - SkinsRestorer/INFO]: [SkinsRestorer] ----------------------------------------------
+[09:01:07] [Craft Scheduler Thread - 5 - SkinsRestorer/INFO]: [SkinsRestorer]     +==================+
+[09:01:07] [Craft Scheduler Thread - 5 - SkinsRestorer/INFO]: [SkinsRestorer]     |   SkinsRestorer  |
+[09:01:07] [Craft Scheduler Thread - 5 - SkinsRestorer/INFO]: [SkinsRestorer]     |------------------|
+[09:01:07] [Craft Scheduler Thread - 5 - SkinsRestorer/INFO]: [SkinsRestorer]     |  Standalone Mode |
+[09:01:07] [Craft Scheduler Thread - 5 - SkinsRestorer/INFO]: [SkinsRestorer]     +==================+
+[09:01:07] [Craft Scheduler Thread - 5 - SkinsRestorer/INFO]: [SkinsRestorer] ----------------------------------------------
+[09:01:07] [Craft Scheduler Thread - 5 - SkinsRestorer/INFO]: [SkinsRestorer]     Current version: 15.0.3
+[09:01:07] [Craft Scheduler Thread - 5 - SkinsRestorer/INFO]: [SkinsRestorer]     Commit: aa377c1
+[09:01:07] [Craft Scheduler Thread - 5 - SkinsRestorer/INFO]: [SkinsRestorer]     This is the latest version!
+[09:01:07] [Craft Scheduler Thread - 5 - SkinsRestorer/INFO]: [SkinsRestorer] ----------------------------------------------
+[09:01:07] [Craft Scheduler Thread - 9 - AFKPlus/INFO]: [AFKPlus] §6There is no update available
+[09:01:07] [Server thread/INFO]: [Skript] Loaded 60 variables in 0.0 seconds
+[09:01:07] [Craft Scheduler Thread - 11 - BetterTeams/WARN]: [BetterTeams] An update for BetterTeams has been released. Update here (https://www.spigotmc.org/resources/better-teams.17129/)
+[09:01:09] [Server thread/INFO]: Infuse ✔ | Combat Log is Enabled! Disable it through the plugin's sk file.
+[09:01:09] [Server thread/INFO]: Infuse ✔ | Data Loaded Successfully
+[09:01:09] [Server thread/INFO]: [Skript] All scripts loaded without errors.
+[09:01:09] [Server thread/INFO]: [Skript] Loaded 1 script with a total of 7 triggers and 5 commands in 1.62 seconds
+[09:01:09] [Server thread/INFO]: [Skript] Finished loading.
+[09:01:09] [Server thread/INFO]: Done (40.814s)! For help, type "help"
+[09:01:09] [Server thread/INFO]: Timings Reset
+[09:01:09] [DiscordSRV - JDA Callback 0/INFO]: [DiscordSRV] Cleared all pre-existing slash commands in 1/1 guilds (0 cancelled)
+[09:01:10] [Server thread/INFO]: [UltimateAutoRestart] Did not find any plugins to hook into!
+[09:01:12] [Server thread/INFO]:  
+[09:01:12] [Server thread/INFO]:  [UltimateAutoRestart] New update available!
+[09:01:12] [Server thread/INFO]:  Current version: Build 54a with latest being 2023.11!
+[09:01:12] [Server thread/INFO]:  
+[09:01:12] [Server thread/INFO]:  SpigotMC -> https://norska.dev/r/spigot/uar/
+[09:01:12] [Server thread/INFO]:  Polymart -> https://norska.dev/r/polymart/uar/
+[09:01:12] [Server thread/INFO]:  
+[09:11:01] [User Authenticator #0/INFO]: UUID of player Yash_gamer is 13882601-82e8-3784-af14-12fa20604d5f
+[09:11:06] [Server thread/INFO]: Yash_gamer joined the game
+[09:11:06] [Server thread/INFO]: Yash_gamer[/183.82.154.88:24347] logged in with entity id 362 at ([BossSmp]4562.200092251004, 77.0, -4698.343513295311)
+[09:11:07] [Craft Scheduler Thread - 12 - DiscordSRV/ERROR]: [DiscordSRV] Your AvatarUrl config option does not contain the {username} placeholder even though this server is using offline UUIDs.
+[09:11:07] [Craft Scheduler Thread - 12 - DiscordSRV/ERROR]: [DiscordSRV] https://cravatar.eu/helmavatar/{username}/{size}.png#{texture} will be used because the default value does not support offline mode servers
+[09:11:07] [Craft Scheduler Thread - 12 - DiscordSRV/ERROR]: [DiscordSRV] You should set your AvatarUrl (in config.yml) to https://cravatar.eu/helmavatar/{username}/{size}.png#{texture} (or another url that supports usernames) to get rid of this error
+[09:12:19] [Server thread/INFO]: Yash_gamer issued server command: /tc toggle
+[09:20:52] [User Authenticator #1/INFO]: UUID of player ARMAN_XD is 825507c5-25d7-30e8-8931-d65c791d51c0
+[09:20:53] [Server thread/INFO]: ARMAN_XD joined the game
+[09:20:53] [Server thread/INFO]: ARMAN_XD[/157.40.207.221:27860] logged in with entity id 2362 at ([BossSmp]299.08800864155444, 72.0, 299.49985485126626)
+[09:21:23] [Server thread/INFO]: §8[§6BossSmpAFK§4+§8] §3ARMAN_XD§6 is now AFK
+[09:21:33] [Server thread/INFO]: §8[§6BossSmpAFK§4+§8] §3ARMAN_XD§6 is no longer AFK
+[09:22:17] [Server thread/INFO]: ARMAN_XD lost connection: Disconnected
+[09:22:17] [Server thread/INFO]: ARMAN_XD left the game
+[09:30:03] [Server thread/INFO]: Villager EntityVillager['Villager'/434, uuid='d43547e4-2023-4560-a0c9-6ed990318669', l='ServerLevel[BossSmp]', x=4581.87, y=75.00, z=-4644.88, cpos=[286, -291], tl=222293, v=true] died, message: 'Villager was slain by Yash_gamer using [YK KI AXE]'
+[09:30:43] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > oye
+[09:30:46] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > server server
+[09:30:47] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > down rahega
+[09:30:53] [Async Chat Thread - #0/INFO]: [Not Secure] [TheDevils] <Yash_gamer> kyu
+[09:32:22] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > abe
+[09:32:25] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > shiftkrr raha hu
+[09:32:28] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > 16gb ram pe
+[09:32:35] [Async Chat Thread - #2/INFO]: [Not Secure] [TheDevils] <Yash_gamer> abhi tak kiya hi nahi
+[09:32:40] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > nhi
+[09:32:44] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > abhi 4gb ram pe hi
+[09:32:46] [Async Chat Thread - #3/INFO]: [Not Secure] [TheDevils] <Yash_gamer> kitna time lagega
+[09:32:47] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > chal raaha
+[09:32:47] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > ;-;
+[09:32:52] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > 1hours
+[09:32:54] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > dude
+[09:33:01] [Async Chat Thread - #3/INFO]: [Not Secure] [TheDevils] <Yash_gamer> sun 4bje se kariyo
+[09:33:08] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > bro ;-;
+[09:33:09] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > kyu
+[09:33:09] [User Authenticator #2/INFO]: UUID of player ARMAN_XD is 825507c5-25d7-30e8-8931-d65c791d51c0
+[09:33:09] [Server thread/INFO]: ARMAN_XD joined the game
+[09:33:09] [Server thread/INFO]: ARMAN_XD[/157.40.102.247:39056] logged in with entity id 4740 at ([BossSmp]331.90923583514507, 75.0, 353.8627045721083)
+[09:33:10] [Async Chat Thread - #2/INFO]: [Not Secure] [TheDevils] <Yash_gamer> ok
+[09:33:23] [Async Chat Thread - #3/INFO]: [Not Secure] [TheDevils] <Yash_gamer> tabhe mai khelunga nahi
+[09:33:24] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > ok
+[09:33:29] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > 4baje ;-;
+[09:33:30] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > ok
+[09:33:33] [Server thread/INFO]: ARMAN_XD lost connection: Disconnected
+[09:33:33] [Server thread/INFO]: ARMAN_XD left the game
+[09:37:26] [Server thread/INFO]: Yash_gamer lost connection: Disconnected
+[09:37:26] [Server thread/INFO]: Yash_gamer left the game
+[09:37:42] [JDA MainWS-ReadThread/INFO]: [DiscordSRV] Chat: [Discord | :̗̀➛ THE CREATOR・⟐] Rishab?! > alright doing it now

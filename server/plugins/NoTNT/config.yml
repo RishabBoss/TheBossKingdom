@@ -1,0 +1,4 @@
+config-version: 1.4
+message: '&cSorry %player%, you lack the required permission to do that.'
+ignite-permission: notnt.ignite
+place-permission: notnt.place

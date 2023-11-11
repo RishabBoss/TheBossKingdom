@@ -1,0 +1,174 @@
+name: The
+description: ''
+open: false
+pvp: false
+home: ''
+color: '6'
+chests: []
+players:
+- 74d58d02-bcec-3b6a-a8c7-1305cb2f5350,OWNER
+- 506e7d36-6644-3e50-9282-88c93cb23522,DEFAULT
+- 6ae75832-1e33-354a-9998-b538ac367b67,DEFAULT
+level: 1
+tag: Boys
+echest:
+  '0':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: APPLE
+  '2':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: LEATHER
+    amount: 5
+  '3':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: PLAYER_HEAD
+    amount: 3
+    meta:
+      ==: ItemMeta
+      meta-type: SKULL
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Health
+        Ore"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Craft
+        4 of these together to get a medkit"}],"text":""}'
+      skull-owner:
+        ==: PlayerProfile
+        uniqueId: d2cbaeac-3d05-4ba9-a55e-df0bb4f23977
+        properties:
+        - name: textures
+          value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWJiMTIyZTJmMjJkMzRjNjcxZmRkMmNmMTdjMjMxOGMzNzU1NDczMGY0YTkzNDc5NzEyN2M1ZGI1ZTdhIn19fQ==
+  '4':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: DIRT
+    amount: 25
+  '5':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: PLAYER_HEAD
+    amount: 5
+    meta:
+      ==: ItemMeta
+      meta-type: SKULL
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Petrified
+        Wood"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Smelt
+        this to get wood"}],"text":""}'
+      skull-owner:
+        ==: PlayerProfile
+        uniqueId: 07471abb-1069-4ba9-a670-990829653635
+        properties:
+        - name: textures
+          value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjgxOGQ2M2YwNTZlYjQ3OTYxM2QxYzRkODZlZDFiY2UwYjM3YmNmMzhlZDdkZDkzZWNiZmM2NmZhZGUxYmY2In19fQ==
+  '1':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: IRON_INGOT
+    amount: 10
+  '6':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: LAPIS_LAZULI
+    amount: 64
+  '7':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: LAPIS_LAZULI
+    amount: 64
+  '8':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: PLAYER_HEAD
+    meta:
+      ==: ItemMeta
+      meta-type: SKULL
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Liquid
+        Ore"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_aqua","text":"This
+        ore smelts into liquid ingots"}],"text":""}'
+      skull-owner:
+        ==: PlayerProfile
+        uniqueId: 62020a12-1b60-4ef7-b0a7-645d971ec3d2
+        properties:
+        - name: textures
+          value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzZmYTM4YzBjODU5NTJlYzExODYzYTc5ODhlMGU0OWVjNjhkNGM3MTI5YmE2NmE1MWU4ODI4YmI0NjMwMjc4MCJ9fX0=
+  '10':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ROTTEN_FLESH
+    amount: 11
+  '11':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: OBSIDIAN
+    amount: 16
+  '12':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: STONE_PICKAXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 112
+  '14':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: CHICKEN
+  '15':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: FEATHER
+    amount: 2
+  '16':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: WHEAT_SEEDS
+  '18':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: PORKCHOP
+    amount: 5
+  '19':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: COBBLESTONE
+    amount: 12
+  '20':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: OAK_SAPLING
+    amount: 2
+  '21':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: DANDELION
+    amount: 3
+  '22':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ANDESITE
+  '23':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: OAK_PLANKS
+    amount: 17
+  '24':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: STICK
+  '26':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: LAPIS_LAZULI
+    amount: 5
+  '9':
+    ==: org.bukkit.inventory.ItemStack
+    v: 3463
+    type: ENDER_CHEST
+    amount: 8
+score: 0
