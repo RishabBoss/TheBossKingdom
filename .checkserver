@@ -7,6 +7,6 @@ if [ -z "$server" ]; then
     ./startBedrockServer
     killall screen
 else
-    echo -e '\nyou are fine\n'
+    echo -e '\nyou are fine!\n'
 fi
 exit
